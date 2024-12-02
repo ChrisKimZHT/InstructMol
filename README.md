@@ -1,4 +1,4 @@
-# InstructMol: Multi-Modal Integration for Building a Versatile and Reliable Molecular Assistant in Drug Discovery
+# InstructMol: Multi-Modal Integration for Building a Versatile and Reliable Molecular Assistant in Drug Discovery (COLING 2025)
 Codes for our paper *InstructMol: Multi-Modal Integration for Building a Versatile and Reliable Molecular Assistant in Drug Discovery*
 
 <!-- *Visual instruction tuning towards large language and vision models with GPT-4 level capabilities.*-->
@@ -18,6 +18,7 @@ The diagram presented below provides an overview of the architectural design of 
 </p>
 
 ## Release
+- [2024/11/30] 🔥 Accepted by COLING 2025. (Jesus, finally get accepted)
 - [2023/11/27] 🔥 We first release our code (including training and evaluation scripts).
 
 
