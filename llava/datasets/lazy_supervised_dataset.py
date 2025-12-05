@@ -101,10 +101,25 @@ class LazySupervisedGraphDataset(Dataset):
         
         if 'graph' in sources[0]:
             graph = self.list_data_dict[i]['graph']
+
+            if 'question' in sources[0] and 'answer' in sources[0]:
+                for e in sources:
+                    e['conversations'] = [
+                        {"from": "human", "value": "<image>\n" + e["question"]},
+                        {"from": "gpt", "value": e["answer"]}
+                    ]
+
             sources = preprocess_multimodal(
                 copy.deepcopy([e["conversations"] for e in sources]),
                 self.data_args)
         else:
+            if 'question' in sources[0] and 'answer' in sources[0]:
+                for e in sources:
+                    e['conversations'] = [
+                        {"from": "human", "value": "<image>\n" + e["question"]},
+                        {"from": "gpt", "value": e["answer"]}
+                    ]
+
             sources = copy.deepcopy([e["conversations"] for e in sources])
         data_dict = preprocess(
             sources,
